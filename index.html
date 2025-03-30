@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Miku!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+    <section class="welcome-section">
+        <div class="left-content">
+            <h1>
+                <span>W</span><span>E</span><span>L</span><span>C</span><span>O</span><span>M</span><span>E</span> 
+                <p></p><span>M</span><span>I</span><span>K</span><span>U</span><span>U</span> <span>❤</span>
+            </h1>
+        </div>
+        <div class="right-content">
+            <p class="timer">It’s been <span id="weeks">0</span> weeks, <span id="days">0</span> days,  
+                <span id="hours">0</span> hours, <span id="minutes">0</span> minutes and  
+                <span id="seconds">0</span> seconds since you last messaged</p>
+            <p class="status-message">
+                "I'm deactivating my Instagram until after my board exams to avoid distractions but I'll be posting on Eid until then, Allah Hafiz, see you later✨"    
+            </p>
+            <button id="playMusicButton" class="play-music-btn">Play Music</button>
+        </div>
+    </section>
+
+    <section class="update-section">
+        <h2>Here's what happened while you were away!</h2>
+    </section>
+
+    <div class="carousel-container">
+        <button class="carousel-button prev" aria-label="Previous slide">
+            <i class="fa fa-chevron-left"></i>
+        </button>
+        <div class="carousel" data-flickity='{ "draggable": false, "prevNextButtons": false, "wrapAround": true }'>
+            <div class="carousel-cell">
+                <div class="carousel-cell-title">Video One</div>
+                <iframe width="192" height="108" src="https://www.youtube.com/embed/F0X9b95jYDg" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="carousel-cell">
+                <div class="carousel-cell-title">Video Two</div>
+                <iframe width="192" height="108" src="https://www.youtube.com/embed/e4IcNXFPTOI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="carousel-cell">
+                <div class="carousel-cell-title">Video Three</div>
+                <iframe width="192" height="108" src="https://www.youtube.com/embed/_SHLjl6YZiA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="carousel-cell">
+                <div class="carousel-cell-title">Video Four</div>
+                <iframe width="192" height="108" src="https://www.youtube.com/embed/M8xYGKKCcU0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <button class="carousel-button next" aria-label="Next slide">
+            <i class="fa fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <section class="memes-section">
+        <h2>Some memes I saved for you</h2>
+        <div class="board">
+            <div class="polaroid" style="top: 20%; left: 15%; transform: rotate(-15deg);">
+                <img src="memes/Picsart_25-03-28_12-48-25-027.png" alt="Meme 1">
+            </div>
+            <div class="polaroid" style="top: 10%; left: 50%; transform: rotate(10deg);">
+                <img src="memes/Picsart_25-03-28_12-49-51-371.png" alt="Meme 2">
+            </div>
+            <div class="polaroid" style="top: 50%; left: 35%; transform: rotate(-8deg);">
+                <img src="memes/Picsart_25-03-28_12-50-52-024.png" alt="Meme 3">
+            </div>
+            <div class="polaroid" style="top: 55%; left: 60%; transform: rotate(12deg);">
+                <img src="memes/Picsart_25-03-28_12-51-59-763.png" alt="Meme 4">
+            </div>
+            <div class="polaroid" style="top: 25%; left: 75%; transform: rotate(-10deg);">
+                <img src="memes/Picsart_25-03-28_12-54-41-386.png" alt="Meme 5">
+            </div>
+            <div class="polaroid" style="top: 60%; left: 10%; transform: rotate(5deg);">
+                <img src="memes/Picsart_25-03-28_13-07-48-465.png" alt="Meme 6">
+            </div>
+            <div class="polaroid" style="top: 45%; left: 85%; transform: rotate(-5deg);">
+                <img src="memes/Picsart_25-03-28_13-12-01-963.png" alt="Meme 7">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for enlarged meme -->
+    <div id="memeModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Enlarged Meme">
+    </div>
+
+    <section class="music-section">
+        <h2>How about some music mi lady?</h2>
+        <div class="container">
+            <div class="music-player">
+                <div class="screen">
+                    <div id="player"></div> <!-- YouTube player -->
+                </div>
+
+                <div class="controls">
+                    <button id="prev" class="btn"><i class="fa fa-backward fa-lg"></i></button>
+                    <button id="playPause" class="btn"><i class="fa fa-play fa-lg"></i></button>
+                    <button id="next" class="btn"><i class="fa fa-forward fa-lg"></i></button>
+                </div>
+            </div>
+
+            <div class="tracklist">
+                <div class="track" style="width: 500px;">1. From the start - Laufey</div>
+                <div class="track">2. Gumaan - Young Stunners</div>
+                <div class="track" style="width: 500px;">3. Bayaan - Maand</div>
+                <div class="track" >4. Just the two of us - Grover Washington Jr.</div>
+                <div class="track" style="width: 500px;">5. Careless whisper - George Michael</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hearts-section">
+        <div class="hearts-container">
+            <div class="hearts-box">
+                <h2 class="title">Pop dem hearts!</h2>
+                <div class="inner-box"></div>
+            </div>
+            <div class="score">Score: <span id="score">0</span></div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function updateTimer() {
+            let lastMessageDate = new Date("March 6, 2025 13:27:00"); // Updated to the correct date & time
+            let now = new Date();
+            let diff = now - lastMessageDate;
+    
+            let weeks = Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
+            let days = Math.floor((diff / (1000 * 60 * 60 * 24)) % 7);
+            let hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            let minutes = Math.floor((diff / (1000 * 60)) % 60);
+            let seconds = Math.floor((diff / 1000) % 60);
+    
+            document.getElementById("weeks").textContent = weeks;
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+        }
+    
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>

@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #DAD7CD; /* Warm Beige */
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.welcome-section {
+    background-color: #A3B18A; /* Muted Olive */
+    color: #344E41; /* Dark Green-Gray */
+    width: 100%;  /* Full viewport width */
+    height: 750px; /* Fixed height */
+    display: flex;
+    padding: 20px; /* Reduced padding to prevent extra space */
+    box-sizing: border-box;
+}
+
+.left-content {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align text */
+    animation: fadeInLeft 2s ease-in-out;
+}
+
+.right-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align text */
+    animation: fadeInRight 2s ease-in-out;
+}
+
+h1 {
+    font-size: 48px; /* Increased size for better visibility */
+    text-shadow: 4px 4px 0px #3A5A40; /* Stronger retro effect */
+    margin: 10px 0;
+}
+
+h1 span {
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Faster transition */
+}
+
+h1 span:hover {
+    transform: scale(1.2);
+    color: #588157; /* Muted Green */
+}
+
+.timer {
+    font-size: 20px; /* Increased size for readability */
+    color: #3A5A40; /* Forest Green */
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.status-message {
+    font-size: 18px; /* Increased size */
+    margin-top: 30px;
+    color: #344E41; /* Dark Green-Gray */
+    background-color: #588157; /* Muted Green */
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px #3A5A40;
+    max-width: 80%; /* Prevents it from stretching too wide */
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Faster transition */
+}
+
+.status-message:hover {
+    transform: scale(1.05);
+    color: #DAD7CD; /* Warm Beige */
+    background-color: #344E41; /* Dark Green-Gray */
+}
+
+.update-section {
+    background-color: #DAD7CD; /* Warm Beige */
+    color: #344E41; /* Dark Green-Gray */
+    padding: 20px;
+    text-align: center;
+}
+
+.update-section h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+h2:hover {
+    color: #588157; /* Muted Green */
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.carousel-container {
+    display: flex;
+    justify-content: center; /* Center the carousel container */
+    align-items: center;
+    gap: 10px;
+    background-color: #344E41;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 50%; /* Reduced width of the carousel container */
+    margin: 0 auto; /* Center the carousel container */
+}
+
+.carousel {
+    width: 100%;  /* Set width of the carousel to fill the container */
+    height: 150px; /* Set height of the carousel */
+    padding-top: 0px; /* Add padding to lower the cells */
+}
+
+.carousel-cell {
+    width: 192px; 
+    height: 150px;
+    background-color: #3A5A40;
+    margin-right: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure video fits within the cell */
+    flex-direction: column; /* Stack title and video vertically */
+}
+
+.carousel-cell:hover {
+    transform: scale(1.05);
+}
+
+.carousel-cell video {
+    width: 100%; /* Make the video fill the cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Match the cell's rounded corners */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+}
+
+.carousel-button {
+    background-color: #6A994E; /* Button color */
+    border: none;
+    width: 50px; /* Match the button size */
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 4px 4px 0px #3A5A40; /* Stronger shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+.carousel-button:hover {
+    background-color: #588157; /* Slightly darker on hover */
+    transform: scale(1.1);
+}
+
+.carousel-button i {
+    font-size: 24px; /* Adjust icon size */
+    color: #DAD7CD; /* Lighter text for contrast */
+}
+
+.carousel-cell-title {
+    font-size: 14px; /* Adjust font size for the title */
+    color: #DAD7CD; /* Match the text color with the theme */
+    margin-bottom: 8px; /* Add spacing between title and video */
+    font-family: 'Press Start 2P', cursive; /* Retro font for consistency */
+    text-align: center; /* Center the title */
+}
+.memes-section {
+    background-color: #DAD7CD; /* Warm Beige */
+    color: #344E41; /* Dark Green-Gray */
+    padding: 20px;
+    text-align: center;
+}
+
+.memes-section h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.board {
+    width: 80%;
+    max-width: 850px;
+    height: 450px;
+    background-color: #A3B18A; /* Muted Olive */
+    border: 10px solid #588157; /* Muted Green */
+    border-radius: 150px;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow */
+}
+
+/* Polaroid Containers */
+.polaroid {
+    width: 100px;
+    height: 100px;
+    background-color: #94A187;
+    border: 8px solid #EDEDE9;
+    box-shadow: 4px 4px 0px #3A5A40;
+    position: absolute;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.polaroid:hover {
+    transform: scale(1.1);
+    box-shadow: 8px 8px 0px #3A5A40;
+}
+
+/* Different rotations for scattered effect */
+.polaroid:nth-child(1) { top: 20%; left: 15%; transform: rotate(-15deg); }
+.polaroid:nth-child(2) { top: 10%; left: 50%; transform: rotate(10deg); }
+.polaroid:nth-child(3) { top: 50%; left: 30%; transform: rotate(-8deg); }
+.polaroid:nth-child(4) { top: 55%; left: 65%; transform: rotate(12deg); }
+.polaroid:nth-child(5) { top: 25%; left: 75%; transform: rotate(-10deg); }
+
+.polaroid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the polaroid area */
+    border-radius: 4px; /* Slight rounding for a polished look */
+}
+
+.music-section {
+    background-color: #DAD7CD; /* Warm Beige */
+    color: #344E41; /* Dark Green-Gray */
+    padding: 20px;
+    text-align: center;
+}
+
+.music-section {
+    background-color: #DAD7CD; /* Warm Beige */
+    color: #344E41; /* Dark Green-Gray */
+    padding: 20px;
+    text-align: center;
+}
+
+.music-section h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Music Player */
+.music-player {
+    width: 457px;
+    height: 457px;
+    background-color: #588157; /* Muted Green */
+    border: 10px solid #344E41; /* Forest Green */
+    border-radius: 190px;
+    position: relative;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Outer shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Screen */
+.screen {
+  width: 370px;
+  height: 200px;
+  background-color: #588157; /* Muted Green */
+  border: 10px solid #344E41; /* Forest Green */
+  border-top-right-radius: 150px;
+  border-top-left-radius: 150px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: inset -5px -5px 0px #2C4933;
+} 
+
+/* YouTube iframe */
+#player {
+  width: 372px;
+  height: 200px;
+  border-top-right-radius: 140px;
+  border-top-left-radius: 140px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 12px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+/* Controls */
+.controls {
+    position: absolute;
+    bottom: 50px; /* Adjusted upwards */
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    width: 80px; /* Button size */
+    height: 80px;
+    background-color: #588157;
+    border: 10px solid #344E41;
+    border-radius: 50%;
+    box-shadow: 5px 5px 0px #3A5A40;
+    font-size: 24px;
+    color: #A3B18A;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active {
+    box-shadow: inset -3px -3px 0px #2C4933;
+}
+
+/* Tracklist */
+.tracklist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.track {
+    width: 400px;
+    height: 40px;
+    background-color: #588157;
+    border: 10px solid #344E41;
+    border-radius: 30px;
+    box-shadow: 5px 5px 0px #3A5A40;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px; /* Reduced text size */
+    line-height: 20px; /* Adjusted line height */
+    text-align: center; /* Centralized text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure text stays within bounds */
+}
+
+.track.active {
+    background-color: #A3B18A; /* Highlight active track */
+}
+
+.track:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #A3B18A; /* Highlight color */
+    color: #344E41; /* Text color on hover */
+    cursor: pointer;
+}
+
+.play-music-btn {
+    background-color: #6A994E; /* Button color */
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+    color: #DAD7CD; /* Text color */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #3A5A40; /* Shadow effect */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    margin-top: 20px; /* Add spacing */
+}
+
+.play-music-btn:hover {
+    background-color: #588157; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+.hearts-section {
+    background-color: #DAD7CD; /* Warm Beige */
+    color: #344E41; /* Dark Green-Gray */
+    padding: 20px;
+    text-align: center;
+}
+
+.hearts-container {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 20px;
+    color: #A3B18A;
+    text-shadow: 2px 2px #1e3d1e;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Removed hover effect */
+}
+
+.hearts-box {
+    width: 1100px;
+    height: 550px;
+    background: #4d734d;
+    border-radius: 20px;
+    box-shadow: 10px 10px #2d462d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inner-box {
+    width: 1000px;
+    height: 450px;
+    background: #2e4b2e;
+    border-radius: 15px;
+    box-shadow: 5px 5px #1e3d1e;
+    overflow: hidden; /* Ensure the heart stays within the inner box */
+    position: relative;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    background-color: #6B8E23; /* Muted Olive */
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-45deg);
+    animation: moveUp 5s linear infinite;
+    cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #6B8E23; /* Muted Olive */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -15px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 15px;
+}
+
+@keyframes moveUp {
+    0% {
+        bottom: 0;
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 1;
+    }
+}
+
+.score {
+    font-size: 20px;
+    color: #3A5A40;
+    margin-top: 20px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    transition: transform 0.2s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.close:hover {
+    color: #ccc;
+}
